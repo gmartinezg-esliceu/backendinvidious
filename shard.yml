@@ -42,7 +42,9 @@ development_dependencies:
 crystal: ">= 1.10.0, < 2.0.0"
 
 license: AGPLv3
-
+targets:
+  invidious:
+    main: src/invidious.cr
 repository: https://github.com/iv-org/invidious
 homepage: https://invidious.io
 documentation: https://docs.invidious.io
