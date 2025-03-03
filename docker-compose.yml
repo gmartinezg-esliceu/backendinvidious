@@ -20,16 +20,14 @@ services:
       # https://github.com/iv-org/invidious/blob/master/config/config.example.yml
       INVIDIOUS_CONFIG: |
         db:
-          dbname: invidious
-          user: kemal
-          password: kemal
-          host: invidious-db
-          port: 5432
+          host: ${PGHOST}
+          user: ${PGUSER}
+          password: ${PGPASSWORD}
+          dbname: ${PGDATABASE}
+          port: ${PGPORT}
         check_tables: true
-        # external_port:
-        # domain:
-        # https_only: false
-        # statistics_enabled: false
+        domain: agile-magic.up.railway.app
+        https_only: true
         hmac_key: "maricon"
     healthcheck:
       test: wget -nv --tries=1 --spider http://127.0.0.1:3000/api/v1/trending || exit 1
