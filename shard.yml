@@ -7,7 +7,10 @@ authors:
 
 description: |
    Invidious is an alternative front-end to YouTube 
-
+targets:
+  invidious:
+    main: src/invidious.cr
+    
 dependencies:
   pg:
     github: will/crystal-pg
